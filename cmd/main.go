@@ -13,6 +13,10 @@ func main() {
 	personTom := &protobuf_data.Person{
 		Name: "Tom",
 		Age:  32,
+		SocialMediaProfiles: &protobuf_data.SocialMediaProfile{
+			Linkedin: "http://www.linkedin.com/users/tom-smith",
+			Twitter: "na",
+		},
 	}
 
 	data := marshaling(personTom)
@@ -44,5 +48,7 @@ func unMarshalling(data []byte) {
 
 	fmt.Println(newPersonTom.Name)
 	fmt.Println(newPersonTom.Age)
+	fmt.Println(newPersonTom.SocialMediaProfiles.Linkedin)
+	fmt.Println(newPersonTom.SocialMediaProfiles.Twitter)
 
 }

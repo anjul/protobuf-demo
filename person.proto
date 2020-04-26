@@ -2,10 +2,16 @@ syntax="proto3";
 
 package protobuf_data;
 
-option go_package="protobuf_data";
+option go_package=".;protobuf_data";
 
 message Person{
     
     string name = 1;
     int32 age = 2;
+    SocialMediaProfile socialMediaProfiles = 3; //Nested fields example
+}
+
+message SocialMediaProfile{
+    string linkedin = 1;
+    string twitter = 2;
 }
