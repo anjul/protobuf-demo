@@ -1,0 +1,11 @@
+syntax="proto3";
+
+package protobuf_data;
+
+option go_package="protobuf_data";
+
+message Person{
+    
+    string name = 1;
+    int32 age = 2;
+}
